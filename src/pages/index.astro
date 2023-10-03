@@ -1,22 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Icon from 'astro-icon';
+import SocialCard from '../components/socialCard.astro';
 ---
 
 <Layout title="Nico Kunz">
 	<main>
-		<div class="flex flex-col my-32 md:flex-row">
+		<div class="flex flex-col justify-center mt-32 mb-80 md:flex-row">
 			<div class="mx-auto">
 				<h1 class="text-5xl font-bold text-gray-50">Hi, I'm Nico</h1>
-				<p class="text-gray-50 text-xl">Master Student @ TU Darmstadt</p>
+				<p class="text-gray-50 text-xl">Master Student <a class="hover:text-gray-500" href="https://www.tu-darmstadt.de/">@TU Darmstadt</a></p>
 				<p class="text-gray-50 text-xl">I showcase my academic achievements, projects and professional experiences here</p>
 			</div>
 		</div>
 		<!-- Contact Me Section -->
-		<div class="flex flex-col md:flex-row">
-			<div class="mx-auto">
-				<h2 class="text-3xl font-bold text-gray-50">Contact Me</h2>
-				<a class="hover:bg-black" href="/"><Icon class="text-gray-50 h-5" name="fa:linkedin"/></a>
+		<div class="flex justify-center">
+			<div class="flex w-fit flex-col justify-center">
+				<h2 class="text-4xl font-bold text-gray-50 mb-4">Contact Me</h2>
+				<div class="flex flex-row justify-evenly space-x-8">
+					<SocialCard title='LinkedIn' iconName='mdi:linkedin' link='www.linkedin.com/in/nico-kunz'/>
+					<SocialCard title="GitHub" iconName="mdi:github" link="www.github.com/nico-kunz"/>
+				</div>
 			</div>
 		</div>
 	</main>
